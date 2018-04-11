@@ -268,6 +268,27 @@ console.log("tablica [-5,-4,0,4,6,21]  jest rosnąca (powinno zwrócić true) " 
 console.log("tablica [-1,2,-1,4,5,6,7] nie jest rosnąca (powinno zwrócić false) " + isNumbersGrowing([-1,2,-1,4,5,6,7]));
 console.log("tablica [8]  jest rosnąca (powinno zwrócić true) " + isNumbersGrowing([8]));
 
+// function_14
+
+function sortArray() {
+
+    //definiowanie zmiennej tablicy..
+    var points = [41, 3, 6, 1, 114, 54, 64];
+
+    //przekazujemy funkcje wyzszego rzedu jako argument,
+    // i funkcja wewnetrzna definiuje porzadek w tablicy i mowi jak sortowac
+    points.sort(function(a, b) {
+        //
+        return a-b;
+    });
+
+    //Zwraca tablice ...
+    return points;
+}
+
+//Wywolanie funkcji...
+sortArray();
+
 
 // functions 2DArray
 
@@ -341,3 +362,25 @@ var arr = [
 console.log(checkArray(arr));
 console.log(print2DArray(arr));
 console.log(create2DArray(4,5));
+
+// time functions
+
+
+function boilEgg(seconds) {
+    var interval = setInterval(function() {
+        console.log('Jajko się gotuje');
+    }, 5000);
+    setTimeout(function() {
+        clearInterval(interval);
+        console.log('jajko ugotowane');
+    }, 1000 * seconds);
+};
+
+
+var id = setInterval(function() {
+    console.log('jestem wywoływana co dwie sekundy');
+}, 2000
+)
+
+
+clearInterval(id);
