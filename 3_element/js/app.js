@@ -1,5 +1,4 @@
 
-
 document.addEventListener("DOMContentLoaded", function(){
     var homeElement = document.getElementById("home");
     var childElements = document.querySelector(".oferts").children; // dostalismy HTMLCollection
